@@ -40,12 +40,16 @@ The Fire Detection System is designed to:
 ---
 
 ## Challenges Addressed
-- False positives due to red/bright objects → mitigated using attention.  
-- Overfitting on small dataset → solved with data augmentation, dropout, and transfer learning.  
-- Need for reliable accuracy → used pre-trained InceptionV3 instead of building from scratch.  
+- False positives from red/bright objects were common.  
+  Added a spatial attention mechanism to help the model focus on the right regions.  
+- Small dataset caused overfitting.  
+  Solved using data augmentation and transfer learning.  
+- Needed stable and high accuracy for safety-critical use.  
+  Used InceptionV3 instead of training from scratch to get better performance.   
 
 ---
 
 ## Results
 - Validation Accuracy: **96.42%**  
 - Precision, Recall, F1 Score: ~0.95 
+
